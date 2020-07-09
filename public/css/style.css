@@ -1,0 +1,16 @@
+.pokemon-image{
+    width: 64px;
+    height: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.pokemon-title{
+    text-align: center;
+    text-transform: uppercase;
+}
+.btn-add {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

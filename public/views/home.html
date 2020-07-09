@@ -1,0 +1,57 @@
+<div class="py-5 text-center">
+  <h2>Pokestore</h2>
+  <h5>Desafio GamaAcademy</h5>
+  <p class="lead">Desafio Pokestore</p>
+</div>
+
+<div class="row">
+  <div class="col-md-12 text-center">
+    <div class="alert alert-success" id="succeedMessage" role="alert" ng-show="showSucceedAddedPokemon">
+      <span>{{message}}</span>
+    </div>
+    <div class="alert alert-danger" id="errorMessage" role="alert" ng-show="showErrorAddedPokemon">
+      <span>{{message}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-4 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span class="text-muted">Total Carrinho</span>
+      <span class="badge badge-secondary badge-pill">${{count}}</span>
+    </h4>
+
+
+    <div class="alert alert-warning" role="alert" ng-show="showErroMessage">
+      {{errorMessage}}
+    </div>
+
+    <ul class="list-group mb-3">      
+      <li class="list-group-item d-flex justify-content-between lh-condensed" ng-repeat="pokemon in pokemonStore">
+        <div>
+          <small class="text-muted">{{pokemon.name}}</small>
+        </div>             
+      </li>
+    </ul>
+
+  </div>
+
+
+  <div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Pokemons</h4>
+      <div class="row">
+        <div class="col-sm-6" ng-repeat="pokemon in pokemons">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title pokemon-title">{{pokemon.name}} - R$ {{pokemon.price}}</h5>
+              <p class="card-text"><img class="pokemon-image" ng-src="{{pokemon.image}}"></p>
+              <a href="#" class="btn btn-primary btn-add" type="submit" ng-click="add()">Adicionar ao carrinho</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
